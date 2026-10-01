@@ -43,7 +43,9 @@ kubectl --kubeconfig "$HOME/.orbstack/k8s/config.yml" delete pod platform-cache-
 
 ## Akua customer demo
 
-The planned hosted demo uses the same authored Package, an unlisted Product, and a trial Offer. The intended customer flow is to open the Offer, sign in, select a Workspace and compatible Cluster, choose memory, and submit the Install. They then inspect its operation and resources and run the Redis commands above against their installed Service. This hosted flow has not yet been verified end to end.
+The planned hosted demo uses the same authored Package, an unlisted Product, and a trial Offer. The intended customer flow is to open the Offer, sign in, select a Workspace and compatible Cluster, choose memory, and submit the Install. This hosted flow has not yet been verified end to end.
+
+For a hosted Install, inspect its operation and resources to find the actual namespace and Service name. Use the selected Cluster's kubeconfig and those install-specific names for a port-forward to local port 16379, then run the four `redis-cli -p 16379` commands above. The OrbStack namespace, Service, and kubeconfig in the local setup commands apply only to the local demo.
 
 Local OrbStack verification proves the Package runs; it does not prove a hosted Akua Install or remote cluster connectivity. A laptop cluster is reachable locally only until it is connected through a supported Akua cluster registration path.
 
