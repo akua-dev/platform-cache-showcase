@@ -8,7 +8,7 @@ This is an ephemeral demo: restarting the server loses cached data. It has no Re
 
 ## Try on OrbStack
 
-Enable Kubernetes in OrbStack and install the [Akua CLI](https://akua.dev/docs/cli). Clone this repository, then run:
+Enable Kubernetes in OrbStack and install the [Akua CLI](https://docs.akua.dev/cli). Clone this repository, then run:
 
 ```console
 akua pkg check
